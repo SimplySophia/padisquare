@@ -17,6 +17,7 @@ export default function RootLayout({
       <body
         className="min-h-screen overflow-x-hidden"
       >
+
         {children}
       </body>
     </html>

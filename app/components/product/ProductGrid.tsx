@@ -1,33 +1,28 @@
-import Image from 'next/image';
-import { Product } from '../../../lib/data';
+'use client';
 
-export default function ProductCard({ product }: { product: Product }) {
-  return (
-    <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <div className="relative h-64 w-full">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          className="object-cover"
-        />
-      </div>
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-1">
-          {product.name}
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-2">
-          {product.description}
+import { Product } from '@/types/product';
+import ProductCard from './ProductCard';
+
+interface Props {
+  products: Product[];
+}
+
+export default function ProductGrid({ products }: Props) {
+  if (products.length === 0) {
+    return (
+      <div className="col-span-full text-center py-16">
+        <p className="text-gray-400 text-lg">
+          No products found matching your criteria.
         </p>
-        <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold text-[#159C47]">
-            ${product.price.toFixed(2)}
-          </span>
-          <button className="bg-[#159C47] hover:bg-[#128739] text-white px-4 py-2 rounded-md transition-colors duration-200">
-            View Details
-          </button>
-        </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+      {products.map(product => (
+        <ProductCard key={product.id} product={product} />
+      ))}
     </div>
   );
 }
