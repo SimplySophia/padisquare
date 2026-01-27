@@ -1,13 +1,15 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getVendorBySlug, getProductsByVendor } from '@/lib/data';
-import VendorStorefront from '@/app/components/vendor/VendorStorefront';
+import VendorStorefront from '../../components/vendor/VendorStorefront';
+
 interface PageProps {
-  params: { vendorSlug: string };
+  params: Promise<{ vendorSlug: string }>; 
 }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const vendor = await getVendorBySlug(params.vendorSlug);
+  const { vendorSlug } = await params;
+  const vendor = await getVendorBySlug(vendorSlug);
   
   if (!vendor) {
     return {
@@ -27,13 +29,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function VendorPage({ params }: PageProps) {
-  const vendor = await getVendorBySlug(params.vendorSlug);
+  const { vendorSlug } = await params; // 
+  const vendor = await getVendorBySlug(vendorSlug);
 
   if (!vendor) {
     notFound();
   }
 
-  const products = await getProductsByVendor(params.vendorSlug);
+  const products = await getProductsByVendor(vendorSlug);
 
   return <VendorStorefront vendor={vendor} products={products} />;
 }
