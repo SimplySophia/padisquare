@@ -3,7 +3,6 @@ import { products } from "./products";
 import { Product } from "@/types/product";
 import { Vendor } from "@/types/vendor";
 
-// Simulate API delay
 const delay = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
 
 export async function getVendorBySlug(slug: string): Promise<Vendor | null> {

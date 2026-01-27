@@ -17,13 +17,13 @@ export default function ProductCard({ product }: Props) {
   };
 
   return (
-    <div className="bg-[#1a3535] rounded-2xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
+    <div className="w-full max-w-100 mx-auto bg-[#1a3535] rounded-2xl overflow-hidden group cursor-pointer transition-transform duration-300 hover:-translate-y-1">
       <div className="relative aspect-square overflow-hidden bg-white">
         <Image
           src={product.image}
           alt={product.name}
           fill
-          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          className="object-cover group-hover:scale-105 transition-transform duration-500 rounded-2xl"
         />
         <button
           onClick={toggleWishlist}

@@ -16,7 +16,7 @@ export const products: Product[] = [
     vendorSlug: "techmart",
     name: "Smart Watch Ultra",
     price: 449.99,
-    image: "/assets/products/headphone.jpg",
+    image: "/assets/products/smart-watch.jpg",
     description: "Advanced fitness tracking and health monitoring",
     createdAt: "2024-01-20T10:00:00Z"
   },
@@ -25,7 +25,7 @@ export const products: Product[] = [
     vendorSlug: "techmart",
     name: "Laptop Stand Aluminum",
     price: 79.99,
-    image: "/assets/products/headphone-2.jpg",
+    image: "/assets/products/stand.jpg",
     description: "Ergonomic and stylish laptop stand",
     createdAt: "2024-01-10T10:00:00Z"
   },
@@ -34,7 +34,7 @@ export const products: Product[] = [
     vendorSlug: "techmart",
     name: "Mechanical Keyboard RGB",
     price: 159.99,
-    image: "/assets/products/headphone-3.jpg",
+    image: "/assets/products/mp3.jpg",
     description: "Gaming keyboard with customizable RGB lighting",
     createdAt: "2024-01-25T10:00:00Z"
   },
@@ -52,7 +52,7 @@ export const products: Product[] = [
     vendorSlug: "techmart",
     name: "Wireless Mouse Ergonomic",
     price: 39.99,
-    image: "/assets/products/headphone-2.jpg",
+    image: "/assets/products/speaker.jpg",
     description: "Comfortable wireless mouse for all-day use",
     createdAt: "2024-01-18T10:00:00Z"
   },
@@ -61,7 +61,7 @@ export const products: Product[] = [
   {
     id: "7",
     vendorSlug: "fashionhub",
-    name: "Classic Denim Bag",
+    name: "Classic Bag",
     price: 89.99,
     image: "/assets/products/bag.jpg",
     description: "Timeless denim jacket for any occasion",
@@ -72,7 +72,7 @@ export const products: Product[] = [
     vendorSlug: "fashionhub",
     name: "Leather Crossbody Bag",
     price: 129.99,
-    image: "/assets/products/bag-2.jpg",
+    image: "/assets/products/bag-4.jpg",
     description: "Genuine leather bag with adjustable strap",
     createdAt: "2024-01-22T10:00:00Z"
   },
@@ -81,7 +81,7 @@ export const products: Product[] = [
     vendorSlug: "fashionhub",
     name: "Sneakers White Minimal",
     price: 79.99,
-    image: "/assets/products/bag-3.jpg",
+    image: "/assets/products/sneaker.jpg",
     description: "Clean and versatile white sneakers",
     createdAt: "2024-01-08T10:00:00Z"
   },
@@ -90,16 +90,16 @@ export const products: Product[] = [
     vendorSlug: "fashionhub",
     name: "Sunglasses Aviator",
     price: 149.99,
-    image: "/assets/products/bag-4.jpg",
+    image: "/assets/products/sunglass.jpg",
     description: "Classic aviator sunglasses with UV protection",
     createdAt: "2024-01-28T10:00:00Z"
   },
   {
     id: "11",
     vendorSlug: "fashionhub",
-    name: "Cotton T-Shirt Pack",
+    name: "Watch Casual",
     price: 34.99,
-    image: "/assets/products/bag-5.jpg",
+    image: "/assets/products/watch.jpg",
     description: "3-pack premium cotton t-shirts",
     createdAt: "2024-01-03T10:00:00Z"
   },
@@ -108,7 +108,7 @@ export const products: Product[] = [
     vendorSlug: "fashionhub",
     name: "Wool Scarf",
     price: 44.99,
-    image: "/assets/products/bag-1.jpg",
+    image: "/assets/products/scarf.jpg",
     description: "Soft wool scarf in multiple colors",
     createdAt: "2024-01-16T10:00:00Z"
   },
@@ -135,9 +135,9 @@ export const products: Product[] = [
   {
     id: "15",
     vendorSlug: "homestyle",
-    name: "Wall Mirror Round",
+    name: "Hand Flashlight Brass",
     price: 119.99,
-    image: "/assets/products/led-4.jpg",
+    image: "/assets/products/flashlight-1.jpg",
     description: "Elegant round wall mirror with brass frame",
     createdAt: "2024-01-09T10:00:00Z"
   },
@@ -153,18 +153,18 @@ export const products: Product[] = [
   {
     id: "17",
     vendorSlug: "homestyle",
-    name: "Area Rug Geometric",
+    name: "Stage Light Rug",
     price: 199.99,
-    image: "/assets/products/led-2.jpg",
+    image: "/assets/products/stagelight.jpg",
     description: "Stylish geometric pattern area rug 5x7",
     createdAt: "2024-01-07T10:00:00Z"
   },
   {
     id: "18",
     vendorSlug: "homestyle",
-    name: "Wall Art Canvas Set",
+    name: "Battery Operated Candle",
     price: 79.99,
-    image: "/assets/products/led-2.jpg",
+    image: "/assets/products/battery.jpg",
     description: "Abstract wall art canvas prints, set of 3",
     createdAt: "2024-01-19T10:00:00Z"
   }
