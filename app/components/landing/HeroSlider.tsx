@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const heroSlides = [
   {
-    image: '/assets/hero/hero.jpg',
+    image: '/assets/hero/hero-1.jpg',
     title: 'Premium Collection',
     subtitle: 'EXCLUSIVE ACCESS',
     description: 'Experience the pinnacle of craftsmanship and design in our latest curated selection.',
