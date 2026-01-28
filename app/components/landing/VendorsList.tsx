@@ -4,7 +4,7 @@ import { vendors } from '@/lib/data/vendors';
 
 export default function VendorsList() {
   return (
-    <section className="container mx-auto px-4 md:px-6 py-12 md:py-16">
+    <section id="vendors" className="container mx-auto px-4 md:px-6 py-12 md:py-16 scroll-mt-20">
       <div className="mb-10">
         <h2 className="text-2xl md:text-3xl font-bold mb-2">Featured Vendors</h2>
         <p className="text-gray-400">

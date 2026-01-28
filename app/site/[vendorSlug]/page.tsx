@@ -7,6 +7,8 @@ interface PageProps {
   params: Promise<{ vendorSlug: string }>; 
 }
 
+export const revalidate = 60;
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { vendorSlug } = await params;
   const vendor = await getVendorBySlug(vendorSlug);
@@ -29,7 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 export default async function VendorPage({ params }: PageProps) {
-  const { vendorSlug } = await params; // 
+  const { vendorSlug } = await params;
   const vendor = await getVendorBySlug(vendorSlug);
 
   if (!vendor) {
