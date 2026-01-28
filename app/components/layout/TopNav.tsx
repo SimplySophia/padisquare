@@ -18,8 +18,8 @@ export default function TopNav() {
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-center justify-between px-6 py-4 bg-[#102323] border-b border-[#1a3535]">
-        <div className="flex gap-2">
+      <nav className="w-full max-w-6xl mx-auto hidden md:flex items-center justify-between px-4 py-4 bg-[#102323] border-b border-[#1a3535]">
+        <div className="flex gap-2 items-center">
           <Link 
             href="/" 
             className="group relative px-4 py-2 text-gray-300 font-medium transition-colors duration-300 overflow-hidden"
@@ -56,7 +56,7 @@ export default function TopNav() {
           </Link>
         </div>
         
-        <h1 className="text-xl font-bold tracking-wide uppercase bg-linear-to-r from-white to-green-400 bg-clip-text text-transparent">
+        <h1 className="text-xl font-bold tracking-wide uppercase bg-linear-to-r from-white to-green-400 bg-clip-text text-transparent ">
           Padisquare
         </h1>
         
