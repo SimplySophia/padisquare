@@ -4,63 +4,65 @@ A modern multi-vendor marketplace built with Next.js (App Router).
 Focused on clean architecture, performance, and real-world frontend patterns.
 
 🚀 Live Demo
+[View Live Demo](https://padisquare-teal.vercel.app/)
 
-https://padisquare-teal.vercel.app/
-
-Tech Stack
-
+Tech Stack:
 Next.js 15+ (App Router)
 TypeScript
 Tailwind CSS
 Vercel
 
-✨ What This Project Shows
+What This Project Shows
 Multi-tenant routing
-Server & Client component separation
-Search, sort, and pagination
-Responsive layouts
+Clear Server vs Client component separation
+Product search, sorting, and pagination
+Fully responsive layouts
 ISR caching
-Clean, scalable component structure
+Modular, scalable component structure
 
-Project Structure (Why It’s Set Up This Way)
+Project Structure (Why It’s Set Up This Way):
 app/
   site/[vendorSlug]/     → vendor storefronts
 components/
   vendor/               → vendor UI blocks
   product/              → product cards & lists
-  layout/               → nav & shared layout
-lib/data/               → mock async data
+  layout/               → navigation & shared layout
+lib/data/               → mock async data layer
 types/                  → shared TypeScript models
 
 Multi-Vendor Routing
+Each vendor has an isolated storefront:
+
 /site/techmart
 /site/fashionhub
 /site/homestyle
 
-Server vs Client Components
+Server vs Client Components:
+
 Server Components
 Data fetching
 Metadata / SEO
 ISR caching
+
 Client Components
 Search
 Sorting
+Pagination UI
 
 Pagination:
-UI interaction
-Pagination Logic
 Mobile: 4 products per page
 Desktop: 3 products per page
 Prev / Next navigation
-Auto reset on search or sort
+Auto-resets on search or sort changes
+
 Data Caching (ISR)
 export const revalidate = 60;
-
-
 Pages revalidate every 60 seconds.
-Image Optimization
 
-UI Approach
+Image Optimization:
+Handled via Next.js Image and Vercel’s edge optimization.
+
+UI Approach:
 Dark theme for focus and contrast
 Mobile-first layout
 Minimal UI chrome
@@ -71,13 +73,11 @@ npm install
 npm run dev
 
 Deployment
+Deployed on Vercel
+Auto-deploys on push
+ISR, caching, and image optimization handled by the platform
 
-Deployed on Vercel.
-Auto-deploys on push.
-ISR, image optimization, and caching handled by platform.
-
-📄License
-
+📄 License
 MIT — free to use.
 
 Author
